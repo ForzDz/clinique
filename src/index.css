@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Clinic Design System - Elegant, Professional, Trustworthy */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Medical Blue - Trust & Professionalism */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    /* Primary - Deep Medical Blue */
+    --primary: 210 70% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Healing Green */
+    --secondary: 158 45% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Soft Gray */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Warm Gold for prestige */
+    --accent: 38 75% 55%;
+    --accent-foreground: 215 25% 17%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 210 70% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom Medical Tokens */
+    --medical-blue: 210 70% 35%;
+    --medical-blue-light: 210 60% 95%;
+    --medical-green: 158 45% 45%;
+    --medical-green-light: 158 45% 95%;
+    --medical-gold: 38 75% 55%;
+    --hero-gradient: linear-gradient(135deg, hsl(210 60% 95%) 0%, hsl(158 45% 95%) 50%, hsl(210 40% 98%) 100%);
+    --card-shadow: 0 4px 20px -4px hsl(210 25% 17% / 0.08);
+    --card-shadow-hover: 0 12px 32px -8px hsl(210 25% 17% / 0.12);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 210 70% 35%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 25% 17%;
+    --sidebar-border: 210 25% 90%;
+    --sidebar-ring: 210 70% 35%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 60% 55%;
+    --primary-foreground: 215 25% 10%;
+
+    --secondary: 158 40% 50%;
+    --secondary-foreground: 215 25% 10%;
+
+    --muted: 215 20% 20%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 38 70% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 60% 55%;
+
+    --sidebar-background: 215 25% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 60% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 210 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+
+  /* Medical Card Styles */
+  .medical-card {
+    @apply bg-card rounded-xl border border-border/50 p-6;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+  }
+
+  .medical-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto;
+  }
+
+  /* CTA Styles */
+  .cta-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 shadow-lg;
+    @apply hover:shadow-xl hover:scale-105;
+  }
+
+  .cta-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 shadow-lg;
+    @apply hover:shadow-xl hover:scale-105;
+  }
+
+  .cta-whatsapp {
+    @apply bg-[hsl(142,70%,45%)] text-white px-6 py-3 rounded-lg font-semibold;
+    @apply transition-all duration-300 shadow-lg;
+    @apply hover:shadow-xl hover:scale-105 hover:bg-[hsl(142,70%,40%)];
+  }
+
+  /* Trust Badge */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full;
+    @apply border border-border/50 text-sm text-muted-foreground;
+    box-shadow: var(--card-shadow);
+  }
+
+  /* Floating CTA for Mobile */
+  .floating-cta {
+    @apply fixed bottom-6 right-6 z-50;
+    @apply bg-[hsl(142,70%,45%)] text-white p-4 rounded-full shadow-2xl;
+    @apply transition-transform duration-300 hover:scale-110;
+  }
+
+  /* Service Icon Container */
+  .service-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center text-2xl;
+    background: linear-gradient(135deg, hsl(var(--medical-blue-light)) 0%, hsl(var(--medical-green-light)) 100%);
+  }
+
+  /* Doctor Card */
+  .doctor-card {
+    @apply bg-card rounded-2xl overflow-hidden border border-border/50;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+  }
+
+  .doctor-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3 bg-background border border-border rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary;
+    @apply transition-all duration-200;
+  }
+
+  /* Stats Badge */
+  .stat-item {
+    @apply text-center p-4;
+  }
+
+  .stat-number {
+    @apply text-3xl md:text-4xl font-bold text-primary;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .stat-label {
+    @apply text-sm text-muted-foreground mt-1;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute w-full h-0.5 bg-primary bottom-0 left-0;
+    @apply origin-bottom-right transition-transform duration-300;
+    transform: scaleX(0);
+  }
+
+  .link-underline:hover::after {
+    @apply origin-bottom-left;
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
