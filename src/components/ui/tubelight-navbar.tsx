@@ -68,7 +68,7 @@ export function NavBar({ items, className }: NavBarProps) {
       {/* Barre principale "tubelight" */}
       <div
         className={cn(
-          "fixed top-0 left-1/2 -translate-x-1/2 z-50 pt-6 pointer-events-auto",
+          "fixed top-0 left-[46%] md:left-1/2 -translate-x-1/2 z-50 pt-6 pointer-events-auto",
           className
         )}
       >
