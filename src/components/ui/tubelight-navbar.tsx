@@ -72,7 +72,7 @@ export function NavBar({ items, className }: NavBarProps) {
           className
         )}
       >
-        <div className="flex items-center gap-1 md:gap-3 bg-background/80 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg max-w-[95vw]">
+        <div className="flex items-center gap-1 md:gap-3 bg-background/80 border border-border backdrop-blur-lg py-2 px-2 rounded-full shadow-lg max-w-[95vw]">
           {items.map((item) => {
             const Icon = item.icon
             const isActive = activeTab === item.name
@@ -83,7 +83,7 @@ export function NavBar({ items, className }: NavBarProps) {
                 href={item.url}
                 onClick={(e) => handleNavClick(item, e)}
                 className={cn(
-                  "relative cursor-pointer text-sm font-semibold px-3 md:px-6 py-2 rounded-full transition-colors",
+                  "relative cursor-pointer text-sm font-semibold px-4 md:px-6 py-2.5 rounded-full transition-colors",
                   "text-foreground/80 hover:text-primary",
                   isActive && "bg-muted text-primary"
                 )}
@@ -91,7 +91,7 @@ export function NavBar({ items, className }: NavBarProps) {
               >
                 <span className="hidden md:inline">{item.name}</span>
                 <span className="md:hidden">
-                  <Icon size={18} strokeWidth={2.5} />
+                  <Icon size={24} strokeWidth={2.5} />
                 </span>
                 {isActive && (
                   <motion.div
@@ -125,7 +125,7 @@ export function NavBar({ items, className }: NavBarProps) {
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="fixed top-5 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg md:hidden"
+            className="fixed top-5 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg md:hidden"
           >
             <span className="sr-only">Menu</span>
             <div className="relative h-4 w-5">
@@ -178,12 +178,12 @@ export function NavBar({ items, className }: NavBarProps) {
                       href={item.url}
                       onClick={(e) => handleNavClick(item, e)}
                       className={cn(
-                        "flex items-center gap-3 px-5 py-3 text-base font-medium",
+                        "flex items-center gap-3 px-5 py-4 text-lg font-medium",
                         "text-foreground/80 hover:bg-muted/80 hover:text-primary",
                         isActive && "text-primary"
                       )}
                     >
-                      <Icon size={18} strokeWidth={2.2} className="text-muted-foreground" />
+                      <Icon size={22} strokeWidth={2.2} className="text-muted-foreground" />
                       <span>{item.name}</span>
                     </a>
                   </li>
