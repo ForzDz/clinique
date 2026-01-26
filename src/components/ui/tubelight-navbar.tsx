@@ -68,7 +68,7 @@ export function NavBar({ items, className }: NavBarProps) {
       {/* Barre principale "tubelight" */}
       <div
         className={cn(
-          "fixed top-0 left-[46%] md:left-1/2 -translate-x-1/2 z-50 pt-6 pointer-events-auto",
+          "fixed top-0 left-[46%] md:left-1/2 -translate-x-1/2 z-50 pt-6",
           className
         )}
       >
@@ -165,7 +165,10 @@ export function NavBar({ items, className }: NavBarProps) {
             initial={false}
             animate={isMenuOpen ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
-            className="fixed top-16 left-4 right-4 z-40 rounded-2xl border border-border bg-background/95 shadow-2xl md:hidden"
+            className={cn(
+              "fixed top-16 left-4 right-4 z-40 rounded-2xl border border-border bg-background/95 shadow-2xl md:hidden",
+              !isMenuOpen && "pointer-events-none"
+            )}
           >
             <ul className="flex flex-col divide-y divide-border/60">
               {items.map((item) => {
