@@ -1,5 +1,6 @@
 import { Home, Stethoscope, Users, MapPin, CalendarCheck } from "lucide-react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
+import Brand from "@/components/Brand";
 
 const Navbar = () => {
   const navItems = [
@@ -10,7 +11,7 @@ const Navbar = () => {
     { name: "Localisation", url: "#localisation", icon: MapPin },
   ];
 
-  return <NavBar items={navItems} />;
+  return <NavBar items={navItems} brand={<Brand variant="navbar" />} />;
 };
 
 export default Navbar;

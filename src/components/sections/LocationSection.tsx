@@ -12,7 +12,7 @@ const schedule = [
 const LocationSection = () => {
   const openGoogleMaps = () => {
     window.open(
-      "https://www.google.com/maps/search/?api=1&query=Clinique+Santé+Plus+Oran+Algérie",
+      "https://www.google.com/maps/search/?api=1&query=Clinic+Hova+Oran+Algérie",
       "_blank"
     );
   };
@@ -51,7 +51,7 @@ const LocationSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent flex items-end p-6">
                 <div className="text-card">
-                  <h3 className="text-xl font-bold font-serif">Clinique Santé Plus Oran</h3>
+                  <h3 className="text-xl font-bold font-serif">Clinic Hova</h3>
                   <p className="text-sm opacity-90">Un espace moderne et accueillant au cœur d'Oran</p>
                 </div>
               </div>

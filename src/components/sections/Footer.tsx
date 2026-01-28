@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import Brand from "@/components/Brand";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,10 +17,10 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="text-center md:text-left"
           >
-            <h3 className="text-xl font-bold mb-2 font-serif">
-              Clinique <span className="text-primary">Santé Plus</span>
-            </h3>
-            <p className="text-card/70 text-xs leading-relaxed max-w-xs">
+            <div className="flex justify-center md:justify-start mb-2">
+              <Brand variant="footer" />
+            </div>
+            <p className="text-card text-xs leading-relaxed max-w-xs">
               Votre partenaire de confiance pour des soins dermatologiques d'excellence.
             </p>
           </motion.div>
@@ -60,9 +61,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-4 border-t border-card/10 text-center text-xs text-card/50">
+        <div className="pt-4 border-t border-card/10 text-center text-xs text-card">
           <p>
-            © {currentYear} Clinique Santé Plus. Tous droits réservés.
+            © {currentYear} Clinic Hova. Tous droits réservés.
           </p>
           <p className="mt-1">
           <a href="#" className="hover:text-card transition-colors">Politique de confidentialité</a>

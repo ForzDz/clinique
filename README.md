@@ -1,16 +1,12 @@
-# Clinique - Clinic Management Application
+# Clinic Hova
 
 ## Project info
 
-A modern clinic management application built with React, TypeScript, and Tailwind CSS.
+Site vitrine (Vite + React + TypeScript + Tailwind CSS).
 
-## How can I edit this code?
+## Comment modifier ce code ?
 
-**Use your preferred IDE**
-
-Clone this repo and push changes to deploy.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Prérequis: Node.js + npm.
 
 Follow these steps:
 
@@ -54,4 +50,4 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Push your changes to the main branch, and your hosting provider (Netlify, Vercel, etc.) will automatically deploy the updated version.
+Pousse tes changements sur la branche `main` : Netlify redéploie automatiquement.

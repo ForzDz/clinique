@@ -39,7 +39,7 @@ const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 font-serif"
           >
             Clinique{" "}
-            <span className="text-primary">Santé Plus Oran</span>
+            <span className="text-primary">Hova</span>
           </motion.h1>
 
           {/* Specialty */}

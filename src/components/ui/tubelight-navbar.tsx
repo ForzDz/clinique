@@ -14,9 +14,10 @@ interface NavItem {
 interface NavBarProps {
   items: NavItem[]
   className?: string
+  brand?: React.ReactNode
 }
 
-export function NavBar({ items, className }: NavBarProps) {
+export function NavBar({ items, className, brand }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -73,6 +74,11 @@ export function NavBar({ items, className }: NavBarProps) {
         )}
       >
         <div className="flex items-center gap-1 md:gap-3 bg-background/80 border border-border backdrop-blur-lg py-2 px-2 rounded-full shadow-lg max-w-[95vw]">
+          {brand && (
+            <div className="hidden md:flex items-center pl-2 pr-1">
+              {brand}
+            </div>
+          )}
           {items.map((item) => {
             const Icon = item.icon
             const isActive = activeTab === item.name
@@ -170,6 +176,11 @@ export function NavBar({ items, className }: NavBarProps) {
               !isMenuOpen && "pointer-events-none"
             )}
           >
+            {brand && (
+              <div className="px-5 py-4 border-b border-border/60 flex justify-center">
+                {brand}
+              </div>
+            )}
             <ul className="flex flex-col divide-y divide-border/60">
               {items.map((item) => {
                 const Icon = item.icon
