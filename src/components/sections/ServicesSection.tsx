@@ -75,7 +75,7 @@ const itemVariants = {
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 md:py-24 px-4 md:px-8 overflow-hidden">
+    <section id="services" className="py-16 md:py-24 px-4 md:px-8 bg-muted/30 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -85,8 +85,8 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif drop-shadow-lg">Nos Services</h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <h2 className="section-title font-serif">Nos Services</h2>
+          <p className="section-subtitle">
             Une gamme complète de soins dermatologiques pour votre bien-être cutané
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ const ServicesSection = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl group overflow-hidden p-0 border border-white/20"
+              className="medical-card group overflow-hidden p-0"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">

@@ -64,7 +64,7 @@ const BeforeAfterGallery = () => {
   const currentTreatment = treatments[currentIndex];
 
   return (
-    <section id="resultats" className="py-20">
+    <section id="resultats" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,10 +73,10 @@ const BeforeAfterGallery = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif drop-shadow-lg">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-4">
             Résultats Avant / Après
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Découvrez les transformations remarquables obtenues grâce à nos traitements professionnels
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ const BeforeAfterGallery = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="relative bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/20"
+            className="relative bg-card rounded-2xl shadow-xl overflow-hidden"
           >
             {/* Image Container with Drag Slider */}
             <div

@@ -68,7 +68,7 @@ export function TestimonialsSection() {
   const current = testimonials[activeIndex]
 
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,10 +76,10 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary font-medium tracking-wider uppercase text-sm drop-shadow">
+          <span className="text-primary font-medium tracking-wider uppercase text-sm">
             Témoignages
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 drop-shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
             Ce que disent nos patients
           </h2>
         </motion.div>

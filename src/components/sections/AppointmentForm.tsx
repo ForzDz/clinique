@@ -82,46 +82,46 @@ const AppointmentForm = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-serif drop-shadow-lg">
+              <h2 className="section-title font-serif mb-8">
                 Contactez-nous
               </h2>
 
               {/* Contact Info */}
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border/50">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Téléphone</p>
-                    <p className="font-semibold text-gray-800">0556 48 27 98</p>
+                    <p className="text-sm text-muted-foreground">Téléphone</p>
+                    <p className="font-semibold">0556 48 27 98</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border/50">
                   <div className="w-12 h-12 rounded-full bg-[hsl(142,70%,45%)]/10 flex items-center justify-center">
                     <MessageCircle className="w-5 h-5 text-[hsl(142,70%,45%)]" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">WhatsApp</p>
+                    <p className="text-sm text-muted-foreground">WhatsApp</p>
                     <a 
                       href="https://wa.me/213556482798" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="font-semibold text-gray-800 hover:text-primary transition-colors"
+                      className="font-semibold hover:text-primary transition-colors"
                     >
                       0556 48 27 98
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border/50">
                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <p className="font-semibold text-gray-800">contact@clinique-oran.dz</p>
+                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="font-semibold">contact@clinique-oran.dz</p>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const AppointmentForm = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-white/20"
+              className="medical-card"
             >
               {isSubmitted ? (
                 <motion.div
