@@ -76,10 +76,10 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary font-medium tracking-wider uppercase text-sm">
+          <span className="text-primary font-medium tracking-wider uppercase text-sm drop-shadow">
             Témoignages
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 drop-shadow-lg">
             Ce que disent nos patients
           </h2>
         </motion.div>

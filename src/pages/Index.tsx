@@ -18,18 +18,16 @@ const Index = () => {
         {/* HeroSection garde son propre fond (image) */}
         <HeroSection />
         
-        {/* Reste du site avec fond animé flow field */}
+        {/* Reste du site avec fond animé flow field bleu */}
         <div className="relative">
-          {/* Fond animé derrière toutes les sections */}
+          {/* Fond animé bleu/violet bien visible */}
           <div className="absolute inset-0 z-0">
             <NeuralBackground
-              color="#22C55E"
-              trailOpacity={0.04}
-              particleCount={800}
-              speed={0.5}
+              color="#818cf8"
+              trailOpacity={0.08}
+              particleCount={900}
+              speed={0.6}
             />
-            {/* Overlay semi-transparent pour lisibilité */}
-            <div className="absolute inset-0 bg-white/70" />
           </div>
           
           {/* Contenu des sections */}

@@ -34,8 +34,8 @@ const TeamSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title font-serif">Notre Équipe Médicale</h2>
-          <p className="section-subtitle">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif drop-shadow-lg">Notre Équipe Médicale</h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Des professionnels passionnés et hautement qualifiés à votre service
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="doctor-card"
+              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/20"
             >
               {/* Photo */}
               <div className="relative h-64 md:h-80 overflow-hidden">

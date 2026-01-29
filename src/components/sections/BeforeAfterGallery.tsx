@@ -73,10 +73,10 @@ const BeforeAfterGallery = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-serif drop-shadow-lg">
             Résultats Avant / Après
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Découvrez les transformations remarquables obtenues grâce à nos traitements professionnels
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ const BeforeAfterGallery = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="relative bg-card rounded-2xl shadow-xl overflow-hidden"
+            className="relative bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/20"
           >
             {/* Image Container with Drag Slider */}
             <div
