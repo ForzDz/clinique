@@ -113,13 +113,13 @@ export function TestimonialsSection() {
             style={{ x: numberX, y: numberY }}
             className="absolute -left-8 md:-left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none"
           >
-            <AnimatePresence mode="sync">
+            <AnimatePresence mode="wait">
               <motion.span
                 key={activeIndex}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 0.1, y: 0 }}
                 exit={{ opacity: 0, y: -40 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.3 }}
                 className="text-[180px] md:text-[280px] font-bold text-white leading-none"
               >
                 {String(activeIndex + 1).padStart(2, "0")}
@@ -153,13 +153,13 @@ export function TestimonialsSection() {
             {/* Center - main content */}
             <div className="flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24">
               {/* Company badge */}
-              <AnimatePresence mode="sync">
+              <AnimatePresence mode="wait">
                 <motion.div
                   key={current.company}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.2 }}
                   className="mb-8"
                 >
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10">
@@ -170,39 +170,30 @@ export function TestimonialsSection() {
               </AnimatePresence>
 
               {/* Quote with character reveal */}
-              <div className="relative mb-12">
-                <AnimatePresence mode="sync">
+              <div className="relative mb-12 min-h-[120px]">
+                <AnimatePresence mode="wait">
                   <motion.blockquote
                     key={current.quote}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
                     className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed"
                   >
-                    {current.quote.split(" ").map((word, i) => (
-                      <motion.span
-                        key={i}
-                        initial={{ opacity: 0, y: 16, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.3, delay: i * 0.025, ease: [0.16, 1, 0.3, 1] }}
-                        className="inline-block mr-2"
-                      >
-                        {word}
-                      </motion.span>
-                    ))}
+                    {current.quote}
                   </motion.blockquote>
                 </AnimatePresence>
               </div>
 
               {/* Author row */}
               <div className="flex items-center justify-between">
-                <AnimatePresence mode="sync">
+                <AnimatePresence mode="wait">
                   <motion.div
                     key={current.author}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.4, delay: 0.1 }}
+                    transition={{ duration: 0.2 }}
                     className="flex items-center gap-4"
                   >
                     {/* Animated line before name */}

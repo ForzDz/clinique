@@ -59,8 +59,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            À Oran, des soins professionnels en toute confiance.
-            Votre santé cutanée est notre priorité.
+            Des soins professionnels en toute confiance et sécurité.
+            À Oran.
           </motion.p>
 
           {/* CTA Buttons */}
