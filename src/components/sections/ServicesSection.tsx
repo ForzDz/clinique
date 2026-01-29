@@ -75,7 +75,7 @@ const itemVariants = {
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-16 md:py-24 px-4 md:px-8 bg-muted/30 overflow-hidden">
+    <section id="services" className="py-16 md:py-24 px-4 md:px-8 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div

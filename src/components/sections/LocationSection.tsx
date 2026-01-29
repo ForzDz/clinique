@@ -18,7 +18,7 @@ const LocationSection = () => {
   };
 
   return (
-    <section id="localisation" className="section-padding bg-muted/20">
+    <section id="localisation" className="section-padding">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
