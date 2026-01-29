@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { Stethoscope, Syringe, Sparkles, Heart, Shield, Microscope } from "lucide-react";
 
 // Import images
-import serviceConsultation from "@/assets/service-consultation.jpg";
-import serviceInjectable from "@/assets/service-injectable.jpg";
-import serviceEsthetique from "@/assets/service-esthetique.jpg";
-import serviceLaser from "@/assets/service-laser.jpg";
+import serviceConsultation from "@/assets/service-consultation-v2.png";
+import serviceInjectable from "@/assets/service-injectable-v2.png";
+import serviceEsthetique from "@/assets/service-esthetique-v2.png";
+import serviceLaser from "@/assets/service-laser-real.jpg";
+import serviceMedical from "@/assets/service-medical-real.jpg";
+import serviceScreening from "@/assets/service-screening-real.jpg";
 
 const services = [
   {
@@ -34,14 +36,14 @@ const services = [
     title: "Dermatologie Médicale",
     description: "Traitement des pathologies cutanées avec expertise et bienveillance.",
     features: ["Acné", "Eczéma", "Psoriasis"],
-    image: serviceConsultation
+    image: serviceMedical
   },
   {
     icon: Shield,
     title: "Dépistage Cutané",
     description: "Surveillance préventive des lésions et grains de beauté.",
     features: ["Dermatoscopie", "Cartographie", "Suivi digital"],
-    image: serviceEsthetique
+    image: serviceInjectable
   },
   {
     icon: Microscope,

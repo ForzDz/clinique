@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-clinic-modern.png";
+import heroImage from "@/assets/hero-modern-clinic-v2.png";
 
 const HeroSection = () => {
   return (

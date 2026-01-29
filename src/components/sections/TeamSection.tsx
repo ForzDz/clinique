@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Star } from "lucide-react";
-import doctor1 from "@/assets/doctor-1.jpg";
-import doctor2 from "@/assets/doctor-2.jpg";
+import doctor1 from "@/assets/doctor-marie.png";
+import doctor2 from "@/assets/doctor-jean.png";
 
 const doctors = [
   {
@@ -59,7 +59,7 @@ const TeamSection = () => {
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
-                
+
                 {/* Name overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-card">
                   <h3 className="text-2xl font-bold font-serif">{doctor.name}</h3>
